@@ -4,48 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidad - MiBienestar</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; }
+        body {
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            line-height: 1.8;
+            background-color: #f9fafb;
+            color: #374151;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 30px 45px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+        }
+        h1, h2, h3 {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 700;
+            color: #111827;
+            margin-top: 1.6em;
+            margin-bottom: 0.6em;
+        }
+        h1 {
+            font-size: 2.2em;
+            text-align: center;
+            border-bottom: 1px solid #d1d5db;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }
+        .meta-info {
+            text-align: center;
+            font-size: 0.9em;
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 1.6em;
+            color: #6200EE;
+        }
+        p, li {
+            font-size: 1.05em;
+            margin-bottom: 1em;
+            text-align: justify;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 25px;
+        }
+        strong, b {
+            color: #1f2937;
+            font-weight: 600;
+        }
+        a {
+            color: #6200EE;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+            font-size: 0.9em;
+            color: #6b7280;
+        }
     </style>
 </head>
-<body class="bg-gray-100">
-    <div class="container mx-auto max-w-3xl p-4 md:p-8">
-        <div class="bg-white p-6 md:p-10 rounded-lg shadow">
-            <h1 class="text-3xl font-bold text-gray-800 mb-4">Política de Privacidad de MiBienestar</h1>
-            <p class="text-sm text-gray-500 mb-6">Última actualización: 27 de junio de 2025</p>
+<body>
+    <div class="container">
+        <h1>Política de Privacidad</h1>
+        <p class="meta-info">Aplicación: <strong>MiBienestar</strong><br>Última actualización: 04 de julio de 2025</p>
 
-            <p class="text-gray-700 mb-4">Bienvenido a MiBienestar. Tu privacidad es de suma importancia para nosotros. Esta Política de Privacidad describe qué datos recogemos, cómo los usamos y qué derechos tienes sobre ellos.</p>
+        <p>En MiBienestar, la privacidad y seguridad de sus datos son nuestra máxima prioridad. Esta Política de Privacidad tiene como objetivo informarle de manera clara y transparente sobre qué datos recopilamos, cómo los utilizamos y protegemos, y qué derechos tiene usted sobre ellos.</p>
 
-            <h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">1. Información que Recopilamos</h2>
-            <p class="text-gray-700 mb-4">Para ofrecer una experiencia personalizada y funcional, nuestra aplicación recoge los siguientes tipos de datos:</p>
-            <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
-                <li><b>Información proporcionada por el usuario:</b> Dirección de correo electrónico y contraseña para la creación de la cuenta; datos como edad, sexo, peso, altura y medidas corporales para los cálculos; y las metas personales que establezcas.</li>
-                <li><b>Información recopilada automáticamente:</b> Utilizamos servicios de Firebase para recoger identificadores de usuario anónimos para la gestión de datos, así como informes de rendimiento y fallos para mejorar la estabilidad de la app.</li>
-            </ul>
+        <h2>1. Información que Recopilamos</h2>
+        <p>Para ofrecer una experiencia personalizada y funcional, la aplicación recopila los siguientes tipos de datos, los cuales se asocian de forma segura a su cuenta.</p>
+        <h3>1.1. Datos Proporcionados Directamente por el Usuario</h3>
+        <ul>
+            <li><strong>Datos de Registro:</strong> Dirección de correo electrónico y contraseña para la creación y autenticación de su cuenta.</li>
+            <li><strong>Datos de Perfil y Composición Corporal:</strong> Edad, sexo, peso, altura y perímetros corporales (cuello, cintura y cadera) necesarios para realizar los cálculos de diagnóstico.</li>
+            <li><strong>Datos de Sueño:</strong> Hora de acostarse y preferencias de despertador para el cálculo de los ciclos de sueño.</li>
+            <li><strong>Metas Personales:</strong> Peso objetivo y horas de sueño deseadas que usted establezca en la sección "Mis Metas".</li>
+        </ul>
+        <h3>1.2. Datos Recopilados Automáticamente</h3>
+        <ul>
+            <li><strong>Identificadores de Autenticación:</strong> Utilizamos el identificador de usuario (UID) de Firebase para vincular de forma segura todos sus datos a su cuenta.</li>
+            <li><strong>Datos de Verificación del Dispositivo:</strong> Hacemos uso de <strong>Firebase App Check</strong> para verificar que las solicitudes a nuestros servicios provienen de una instancia legítima de la aplicación, protegiendo la plataforma contra abusos.</li>
+            <li><strong>Datos de Rendimiento y Errores:</strong> Recopilamos informes anónimos de fallos (crashes) y rendimiento a través de Firebase Crashlytics para identificar y solucionar errores, garantizando la estabilidad de la aplicación.</li>
+        </ul>
 
-            <h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">2. Cómo Usamos tu Información</h2>
-            <p class="text-gray-700 mb-4">Usamos la información que recogemos exclusivamente para:</p>
-            <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
-                <li><b>Funcionalidad de la aplicación:</b> Realizar los cálculos, mostrar tu progreso en gráficos, guardar tu historial y gestionar tus metas.</li>
-                <li><b>Gestión de cuentas:</b> Crear y mantener tu cuenta de forma segura.</li>
-                <li><b>Personalización:</b> Enviarte notificaciones de recordatorio y felicitación, siempre que tú hayas activado esta opción.</li>
-                <li><b>Análisis y mejora:</b> Monitorizar la estabilidad de la aplicación y solucionar errores.</li>
-            </ul>
-            <p class="font-semibold text-gray-800">No compartimos tu información personal con terceras empresas con fines de marketing o publicidad.</p>
+        <h2>2. Cómo Utilizamos Su Información</h2>
+        <p>La información recopilada se utiliza exclusivamente para los siguientes propósitos:</p>
+        <ul>
+            <li><strong>Proveer la Funcionalidad Principal:</strong> Realizar los cálculos de diagnóstico corporal, calcular los ciclos de sueño, guardar su historial de registros y gestionar sus metas personales.</li>
+            <li><strong>Gestión de Cuentas:</strong> Crear, mantener y asegurar el acceso a su cuenta personal.</li>
+            <li><strong>Personalización de la Experiencia:</strong> Enviar notificaciones de recordatorio o de hitos alcanzados, siempre y cuando usted haya activado esta opción de forma explícita.</li>
+            <li><strong>Mejora y Mantenimiento:</strong> Analizar datos de rendimiento anónimos para mejorar la estabilidad, velocidad y fiabilidad de la aplicación.</li>
+        </ul>
+        <p><strong>Bajo ninguna circunstancia compartimos o vendemos su información personal identificable con terceras empresas con fines de marketing o publicidad.</strong></p>
 
-            <h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">3. Seguridad y Almacenamiento de Datos</h2>
-            <p class="text-gray-700 mb-4">La seguridad de tus datos es nuestra prioridad. Toda la información se transmite a través de conexiones seguras y cifradas (HTTPS) y se almacena en la base de datos Cloud Firestore de Google, que cuenta con robustas medidas de seguridad.</p>
+        <h2>3. Seguridad y Almacenamiento de Datos</h2>
+        <p>La seguridad de sus datos es fundamental. Implementamos múltiples capas de protección:</p>
+        <ul>
+            <li><strong>Cifrado en Tránsito:</strong> Toda la comunicación entre la aplicación y nuestros servidores se realiza a través de conexiones seguras y cifradas (HTTPS).</li>
+            <li><strong>Almacenamiento Seguro:</strong> Sus datos se almacenan en la base de datos <strong>Cloud Firestore</strong> de Google, que cuenta con robustas medidas de seguridad y reglas de acceso para proteger la información.</li>
+            <li><strong>Autenticación Segura:</strong> La gestión de su cuenta se realiza mediante <strong>Firebase Authentication</strong>, un servicio seguro para el manejo de credenciales.</li>
+        </ul>
 
-            <h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">4. Eliminación de Datos</h2>
-            <p class="text-gray-700 mb-4">Tú tienes el control total sobre tus datos. Puedes eliminar todo tu historial desde la opción "Limpiar Historial" en la app, o solicitar la eliminación completa de tu cuenta contactándonos a través del enlace proporcionado en nuestra ficha de la Play Store.</p>
+        <h2>4. Sus Derechos y Control Sobre Sus Datos</h2>
+        <p>Usted tiene control total sobre sus datos en todo momento:</p>
+        <ul>
+            <li><strong>Acceso y Corrección:</strong> Puede visualizar y corregir sus datos personales y de salud directamente en la aplicación.</li>
+            <li><strong>Eliminación del Historial:</strong> Puede borrar todo su historial de registros en cualquier momento desde la opción "Limpiar Historial" en el menú de la aplicación.</li>
+            <li><strong>Eliminación de la Cuenta:</strong> Puede solicitar la eliminación completa y permanente de su cuenta y todos los datos asociados contactándonos a través del correo electrónico proporcionado más abajo.</li>
+        </ul>
 
-            <h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">5. Permisos de la Aplicación</h2>
-            <p class="text-gray-700 mb-4">Nuestra aplicación solicita el permiso de <b>Notificaciones</b> para poder enviarte los recordatorios de metas. Este permiso es completamente opcional.</p>
+        <h2>5. Permisos de la Aplicación</h2>
+        <p>MiBienestar solicita los siguientes permisos para funcionar correctamente:</p>
+        <ul>
+            <li><strong>Notificaciones:</strong> Para poder enviarle recordatorios sobre sus metas. Este permiso es opcional y se solicita solo si usted activa la funcionalidad.</li>
+            <li><strong>Establecer Alarmas:</strong> La aplicación no gestiona alarmas directamente. Utiliza una intención (Intent) del sistema para solicitar a la aplicación de Reloj de su dispositivo que configure una alarma, dándole a usted el control final.</li>
+        </ul>
+        
+        <h2>6. Privacidad de los Menores</h2>
+        <p>MiBienestar está dirigida a usuarios mayores de 14 años. No recopilamos de forma intencionada información personal de niños menores de 14 años. Si usted es padre o tutor y descubre que su hijo nos ha proporcionado información, por favor, contáctenos para que podamos tomar las medidas necesarias.</p>
 
-            <h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">6. Contacto</h2>
-            <p class="text-gray-700">Si tienes alguna pregunta sobre esta Política de Privacidad, puedes contactarnos por correo electrónico: <a href="mailto:leonardovalverde19@gmail.com" class="text-blue-600 hover:underline">leonardovalverde19@gmail.com</a></p>
-        </div>
+        <h2>7. Cambios en esta Política de Privacidad</h2>
+        <p>Podemos actualizar nuestra Política de Privacidad periódicamente. Le notificaremos de cualquier cambio publicando la nueva política en esta página y actualizando la fecha de "Última actualización". Se le aconseja revisar esta Política de Privacidad periódicamente para cualquier cambio.</p>
+
+        <h2>8. Contacto</h2>
+        <p>Si tiene alguna pregunta o duda sobre esta Política de Privacidad, no dude en contactarnos a través de nuestro correo electrónico de soporte:</p>
+        <p style="text-align:center;"><a href="mailto:leonardovalverde19@gmail.com">leonardovalverde19@gmail.com</a></p>
+        
+        <footer>
+            © 2025 tigredev. Todos los derechos reservados.
+        </footer>
     </div>
 </body>
 </html>
