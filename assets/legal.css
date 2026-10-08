@@ -38,8 +38,6 @@ h1{text-align:center;border-bottom:1px solid var(--border);padding-bottom:16px}
 h2{color:var(--accent);margin-top:1.8em}
 .meta{text-align:center;color:var(--muted)}
 .notice{background:var(--notice);border-left:4px solid var(--accent);padding:14px 18px;border-radius:6px}
-.warning{background:#fff7ed;border-left:4px solid #ea580c;padding:14px 18px;border-radius:6px;color:#7c2d12}
-@media (prefers-color-scheme:dark){.warning{background:#431407;color:#fed7aa}}
 a{color:var(--accent);font-weight:650}
 a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 li{margin-bottom:.55em}
