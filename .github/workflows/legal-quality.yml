@@ -1,0 +1,31 @@
+name: Legal site quality
+
+on:
+  push:
+    branches:
+      - main
+      - "legal/**"
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  legal-quality:
+    name: Legal site quality checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+
+      - name: Validate legal site
+        run: node scripts/validate-legal.cjs
