@@ -27,6 +27,7 @@
 <h2>1. Responsable del tratamiento</h2>
 <ul>
   <li><strong>Responsable:</strong> Luis Leonardo Valverde Cadena, bajo el nombre comercial tigredev.</li>
+  <li><strong>NIF:</strong> 48609608M.</li>
   <li><strong>Domicilio:</strong> C. Cronista Remigi Vicedo, 4, Entlo iz, 03802 Alcoi (Alicante), España.</li>
   <li><strong>Correo de privacidad y soporte:</strong> <a href="mailto:leonardovalverde19@gmail.com">leonardovalverde19@gmail.com</a>.</li>
   <li><strong>Teléfono:</strong> <a href="tel:+34634136078">+34 634 136 078</a>.</li>
@@ -51,8 +52,8 @@
 </ul>
 
 <h3>2.3. IA opcional para Premium</h3>
-<p>Cuando el usuario solicita voluntariamente analizar comida o ejercicio con IA, el texto introducido se procesa mediante Cloud Functions y Google Cloud Vertex AI. Cuando resulte necesario para la función solicitada, puede incluirse el peso para estimar gasto energético y la zona horaria para aplicar correctamente límites diarios. La función se identifica como IA y sus resultados pueden contener errores o aproximaciones.</p>
-<p>La IA no recibe por diseño el correo, nickname ni rutas internas de Firestore para generar esos análisis y no se utiliza para adoptar decisiones que produzcan efectos jurídicos o efectos equivalentes significativos sobre el usuario.</p>
+<p>Cuando el usuario solicita voluntariamente analizar comida o ejercicio con IA, la solicitud pasa por Cloud Functions y Google Cloud Vertex AI. El modelo recibe la descripción introducida por el usuario, limitada técnicamente a 500 caracteres; en el análisis de ejercicio recibe además el peso en kilogramos necesario para estimar gasto energético. La zona horaria se utiliza en backend para aplicar correctamente los límites diarios, pero no forma parte del contenido enviado al modelo para generar el análisis.</p>
+<p>La IA no recibe por diseño el UID de Firebase, correo, nickname ni rutas internas de Firestore para generar esos análisis. Las solicitudes de IA se configuran para la multirregión <strong>UE</strong> de Vertex AI. La función se identifica como IA, sus resultados pueden contener errores o aproximaciones y no se utiliza para adoptar decisiones que produzcan efectos jurídicos o efectos equivalentes significativos sobre el usuario.</p>
 
 <h3>2.4. Datos técnicos</h3>
 <ul>
