@@ -57,6 +57,7 @@ for (const required of [
   "C. Cronista Remigi Vicedo, 4, Entlo iz, 03802 Alcoi (Alicante), España",
   "leonardovalverde19@gmail.com",
   "+34 634 136 078",
+  "48609608M",
 ]) {
   if (!pages["aviso-legal.html"].includes(required)) {
     throw new Error(`Legal notice is missing verified public provider data: ${required}`);
@@ -70,6 +71,9 @@ for (const required of [
   "No vendemos datos de salud",
   "geofencing",
   "FTC Health Breach Notification Rule",
+  "Categorías de datos de salud compartidas y proveedores",
+  "Apelación privacidad de salud",
+  "No vendemos datos de salud",
 ]) {
   if (!pages["privacidad-salud-eeuu.html"].includes(required)) {
     throw new Error(`US health privacy notice is missing: ${required}`);
@@ -117,14 +121,19 @@ for (const [file, html] of Object.entries(pages)) {
 }
 
 const legalNotice = pages["aviso-legal.html"];
-if (!legalNotice.includes("<strong>NIF:</strong>")) {
-  throw new Error("Legal notice must contain an NIF field.");
+if (!legalNotice.includes("<strong>NIF:</strong> 48609608M.")) {
+  throw new Error("Legal notice must contain the verified NIF.");
 }
 
-if (legalNotice.includes("PENDIENTE DE INCORPORAR")) {
-  console.warn(
-    "LEGAL BLOCKER: verified NIF is still pending. Do not publish/merge this revision as final."
-  );
+for (const forbiddenPlaceholder of [
+  "PENDIENTE DE INCORPORAR",
+  "No publicar como versión definitiva",
+]) {
+  for (const [file, html] of Object.entries(pages)) {
+    if (html.includes(forbiddenPlaceholder)) {
+      throw new Error(`${file} contains unresolved legal blocker: ${forbiddenPlaceholder}`);
+    }
+  }
 }
 
 console.log(
