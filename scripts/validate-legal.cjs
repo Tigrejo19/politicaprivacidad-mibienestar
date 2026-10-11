@@ -158,6 +158,22 @@ for (const phrase of [
   }
 }
 
+for (const [name, html] of [
+  ["index.html", pages["index.html"]],
+  ["terminos.html", pages["terminos.html"]],
+]) {
+  for (const required of [
+    "Free",
+    "Premium",
+    "aunque",
+    "https://play.google.com/store/account/subscriptions",
+  ]) {
+    if (!html.includes(required)) {
+      throw new Error(`${name} must explain paid-access lock and subscription management: ${required}`);
+    }
+  }
+}
+
 console.log(
   "Legal site structural guard passed: required pages, consent-version alignment, accessibility, US health notice, local links and medical-claim guard are intact."
 );
