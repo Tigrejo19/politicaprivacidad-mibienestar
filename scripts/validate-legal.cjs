@@ -136,6 +136,28 @@ for (const forbiddenPlaceholder of [
   }
 }
 
+// Current privacy disclosures must distinguish withdrawal from deletion,
+// and never presume every installed Android version has the new menu.
+for (const phrase of [
+  "Retirar consentimiento de salud",
+  "Si todavía no aparece en su aplicación",
+  "Retirar el consentimiento no borra automáticamente",
+  "dispositivos temporalmente desconectados",
+]) {
+  if (!pages["index.html"].includes(phrase)) {
+    throw new Error("Privacy withdrawal disclosure is missing: " + phrase);
+  }
+}
+for (const phrase of [
+  "pueden ser necesarios reintentos",
+  "no dé por concluido el borrado",
+  "retirada del consentimiento de salud no equivale a eliminar",
+]) {
+  if (!pages["eliminar-cuenta.html"].includes(phrase)) {
+    throw new Error("Deletion disclosure is missing: " + phrase);
+  }
+}
+
 console.log(
   "Legal site structural guard passed: required pages, consent-version alignment, accessibility, US health notice, local links and medical-claim guard are intact."
 );
